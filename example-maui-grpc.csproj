@@ -72,6 +72,9 @@
 
 	<ItemGroup>
 		<Protobuf Include="helloworld.proto" />
+		<Protobuf Include="pramanapi/praman.proto" />
+		<Protobuf Include="pramanapi/healthcheck/healthcheck.proto" ProtoRoot="pramanapi" />
+		<Protobuf Include="pramanapi/lifestylejournal/lifestylejournal.proto" ProtoRoot="pramanapi" />
 	</ItemGroup>
 
 	<ItemGroup>

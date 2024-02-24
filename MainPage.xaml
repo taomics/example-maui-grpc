@@ -4,28 +4,48 @@
              x:Class="example_maui_grpc.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="30,0" Spacing="25">
             <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+               Source="dotnet_bot.png"
+               HeightRequest="185"
+               Aspect="AspectFit"
+               SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
-                Text="GRPC Example"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+               Text="GRPC Example"
+               Style="{StaticResource Headline}"
+               SemanticProperties.HeadingLevel="Level1" />
 
+            <!-- Hello -->
+            <Label
+               Text="Hello"
+               Style="{StaticResource Headline}"
+               SemanticProperties.HeadingLevel="Level2" />
+            <Label Text="API Origin:" />
+            <Entry
+              x:Name="OriginEntry"
+              Placeholder="Enter API Origin"
+              Text="https://example-go-grpc.gentlepond-fcbb8d44.japaneast.azurecontainerapps.io" />
             <Label Text="Name:" />
             <Entry x:Name="NameEntry" Placeholder="Enter your name" />
             <Label x:Name="ResponseLabel" Text="Response:" />
 
             <Button
-                x:Name="SendBtn"
-                Text="Send"
+                Text="Exec Hello"
                 Clicked="OnClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- KeepJournal -->
+            <Label
+               Text="KeepJournal"
+               Style="{StaticResource Headline}"
+               SemanticProperties.HeadingLevel="Level2" />
+            <Label Text="API Origin:" />
+            <Entry x:Name="OriginEntry2" Placeholder="Enter API Origin" />
+            <Label x:Name="ResponseLabel2" Text="Response:" />
+            <Button
+                Text="Exec KeepJournal"
+                Clicked="OnClicked2"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
